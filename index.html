@@ -2,199 +2,157 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Sruthy Manohar | Lead DevOps Engineer Portfolio</title>
+  <title>Sruthy Manohar | Expert DevOps Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Sruthy Manohar - Lead DevOps Engineer Portfolio">
+  <meta name="description" content="Sruthy Manohar - DevOps Engineer Portfolio">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
     :root {
-      --accent: #1976d2;
-      --accent-dark: #1565c0;
-      --bg: #f4f6fa;
-      --card-bg: #fff;
-      --text: #222;
-      --gray: #757575;
+      --primary: #1976d2;
+      --primary-dark: #0d47a1;
+      --accent: #43a047;
+      --bg: #f7f9fd;
+      --section-bg: #fff;
+      --gray: #555;
       --radius: 16px;
     }
-    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: 'Montserrat', sans-serif;}
-    body { line-height: 1.6;}
-    .main { display: flex; min-height: 100vh; }
-    .sidebar {
-      background: var(--card-bg);
-      min-width: 300px;
-      max-width: 340px;
-      padding: 40px 20px;
-      box-shadow: 2px 0 16px #0001;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
+    html, body { margin: 0; padding: 0; background: var(--bg); color: #222; font-family: 'Montserrat', sans-serif;}
+    body { line-height: 1.7;}
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--section-bg); box-shadow: 0 2px 12px #0001;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 8vw;
     }
-    .avatar { width: 140px; height: 140px; border-radius: 50%; border: 4px solid var(--accent); box-shadow: 0 2px 16px #1976d220; margin-bottom: 20px;}
-    .name { font-size: 2em; font-weight: 700; color: var(--accent); margin-bottom: 8px;}
-    .title { color: var(--gray); font-size: 1.1em; margin-bottom: 20px;}
-    .contact-info { font-size: 1em; color: var(--gray);}
-    .contact-info a { color: var(--accent-dark); text-decoration: none; }
-    .socials { margin-top: 18px; }
-    .socials a { margin: 0 6px; color: var(--accent); font-size: 1.5em; text-decoration: none; transition: color 0.2s;}
-    .socials a:hover { color: var(--accent-dark);}
-    .section-title { color: var(--accent); font-size: 1.3em; margin-bottom: 10px; margin-top: 36px;}
-    .skills { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 0;}
-    .skill-badge { background: #e3ecfa; color: var(--accent-dark); border-radius: 8px; padding: 3px 11px; font-weight: 500; font-size: 0.93em;}
-    .content { flex: 1; padding: 50px 40px; }
-    .card {
-      background: var(--card-bg);
-      border-radius: var(--radius);
-      box-shadow: 0 4px 28px #1976d230;
-      padding: 35px 30px;
-      margin-bottom: 36px;
-      animation: fadeIn 1s;
+    nav .logo { font-size: 1.6em; font-weight: 700; color: var(--primary);}
+    nav ul { display: flex; gap: 28px; list-style: none; margin: 0; padding: 0;}
+    nav a { text-decoration: none; color: var(--gray); font-weight: 500; font-size: 1.07em; transition: color 0.2s;}
+    nav a:hover, nav a.active { color: var(--primary);}
+    header {
+      padding: 70px 5vw 40px 5vw; background: var(--section-bg);
+      text-align: center; border-radius: 0 0 var(--radius) var(--radius); box-shadow: 0 8px 24px #0002;
     }
-    @keyframes fadeIn { from { opacity:0; transform: translateY(40px);} to{opacity:1;transform:none;} }
-    .card h2 { color: var(--accent); margin-top: 0; }
-    .card ul, .card ol { padding-left: 22px; }
-    .exp-job { font-weight: 600;}
-    .exp-date { color: var(--gray); font-size: 0.98em;}
-    .projects-list, .certs-list, .edu-list { list-style: none; padding: 0;}
-    .projects-list li, .certs-list li, .edu-list li { margin-bottom: 12px;}
-    .project-title { font-weight: 600;}
-    .cert-title { font-weight: 600;}
-    .edu-degree { font-weight: 600;}
-    .fa-ul { margin-left: 1.4em;}
-    .fa-li { color: var(--accent-dark);}
-    @media (max-width: 920px) {
-      .main { flex-direction: column;}
-      .sidebar { flex-direction: row; min-width: 0; max-width: none; padding: 30px 10px; justify-content: flex-start;}
-      .content { padding: 30px 10px;}
+    .hero-img {
+      width: 125px; height: 125px; border-radius: 50%; border: 4px solid var(--primary); margin-bottom: 18px;
+      box-shadow: 0 2px 16px #1976d220;
     }
+    .hero-title { font-size: 2.5em; font-weight: 700; color: var(--primary); margin-bottom: 10px;}
+    .hero-sub { color: var(--gray); font-size: 1.19em; margin-bottom: 14px;}
+    .hero-desc { color: #444; font-size: 1.04em; margin-bottom: 18px;}
+    .cta-btn {
+      background: var(--primary); color: #fff; border: none; border-radius: 30px;
+      padding: 12px 34px; font-size: 1.15em; font-weight: 600; cursor: pointer; box-shadow: 0 2px 12px #1976d220; text-decoration: none; display: inline-block;
+      margin-top: 10px;
+    }
+    section { max-width: 850px; margin: 50px auto 0 auto; padding: 40px 5vw; background: var(--section-bg); border-radius: var(--radius); box-shadow: 0 2px 24px #0001;}
+    h2 { color: var(--primary); margin-top: 0;}
+    .skills-list, .cert-list {display: flex; flex-wrap: wrap; gap: 14px;}
+    .skill-badge, .cert-badge {
+      background: #e3ecfa; color: var(--primary-dark);
+      border-radius: 8px; padding: 7px 16px; font-size: 1em; font-weight: 500; box-shadow: 0 1px 3px #1976d215;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .about-para { font-size: 1.11em; color: #444;}
+    .contact-block {
+      display: flex; flex-direction: column; align-items: flex-start; gap: 14px;
+      font-size: 1.12em; margin-top: 18px;
+    }
+    .contact-block a { color: var(--primary-dark); text-decoration: none; font-weight: 500;}
+    .contact-socials a { color: var(--primary); font-size: 1.6em; margin-right: 18px; transition: color 0.2s;}
+    .contact-socials a:hover { color: var(--accent);}
     @media (max-width: 700px) {
-      .sidebar { padding: 15px 5px;}
-      .content { padding: 8px 2px;}
-      .card { padding: 16px 7px;}
+      nav { flex-direction: column; gap: 8px; padding: 8px 2vw;}
+      header { padding: 38px 2vw 24px 2vw;}
+      section { padding: 26px 3vw;}
+      .hero-title { font-size: 1.5em;}
+      .hero-img { width: 82px; height: 82px;}
     }
   </style>
+  <script>
+    // For nav active link
+    window.addEventListener('DOMContentLoaded', function() {
+      const navLinks = document.querySelectorAll('nav a');
+      window.onscroll = function() {
+        let fromTop = window.scrollY + 80;
+        navLinks.forEach(link => {
+          const section = document.querySelector(link.hash);
+          if (section && section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+            navLinks.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+          }
+        });
+      };
+    });
+  </script>
 </head>
 <body>
-  <div class="main">
-    <aside class="sidebar">
-      <img src="https://avatars.githubusercontent.com/sruthymanohar" alt="Sruthy Manohar" class="avatar">
-      <div class="name">Sruthy Manohar</div>
-      <div class="title">Lead DevOps Engineer<br>Certified Kubernetes Administrator (CKA)</div>
-      <div class="contact-info">
-        <div><i class="fas fa-map-marker-alt"></i> Kottayam, Kerala, India</div>
-        <div><i class="fas fa-envelope"></i> <a href="mailto:mail2sruthymanohar@gmail.com">mail2sruthymanohar@gmail.com</a></div>
-      </div>
-      <div class="socials">
+  <nav>
+    <div class="logo">Sruthy Manohar</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <header>
+    <img src="https://avatars.githubusercontent.com/sruthymanohar" alt="Sruthy Manohar" class="hero-img">
+    <div class="hero-title">Sruthy Manohar</div>
+    <div class="hero-sub">Lead DevOps Engineer &bull; Certified Kubernetes Administrator (CKA)</div>
+    <div class="hero-desc">I help teams architect, automate, and optimize secure cloud-native infrastructures. Let’s build reliable, scalable systems together!</div>
+    <a href="#contact" class="cta-btn">Contact Me for Expert DevOps Solutions</a>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-para">
+      Results-driven DevOps Engineer with 6+ years of experience in architecting, automating, and managing scalable, secure cloud-native infrastructures. I specialize in Kubernetes, AWS, Terraform, CI/CD, and GitOps. I’m passionate about enabling high-velocity software delivery and leading DevOps initiatives at IBS Software.
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <span class="skill-badge"><i class="fab fa-aws"></i> AWS</span>
+      <span class="skill-badge"><i class="fa-solid fa-cubes"></i> Kubernetes</span>
+      <span class="skill-badge"><i class="fa-solid fa-ship"></i> Helm</span>
+      <span class="skill-badge"><i class="fa-solid fa-code-branch"></i> Argo CD</span>
+      <span class="skill-badge"><i class="fab fa-docker"></i> Docker</span>
+      <span class="skill-badge"><i class="fa-solid fa-tools"></i> Jenkins</span>
+      <span class="skill-badge"><i class="fa-brands fa-github"></i> GitHub Actions</span>
+      <span class="skill-badge"><i class="fa-solid fa-terminal"></i> Terraform</span>
+      <span class="skill-badge"><i class="fa-solid fa-gears"></i> Ansible</span>
+      <span class="skill-badge"><i class="fa-solid fa-eye"></i> Prometheus</span>
+      <span class="skill-badge"><i class="fa-solid fa-chart-line"></i> Grafana</span>
+      <span class="skill-badge"><i class="fa-brands fa-linux"></i> Linux</span>
+      <span class="skill-badge"><i class="fa-solid fa-network-wired"></i> Networking</span>
+      <span class="skill-badge"><i class="fa-solid fa-code"></i> Shell Scripting</span>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <div class="cert-list">
+      <span class="cert-badge"><i class="fa-solid fa-certificate"></i> Certified Kubernetes Administrator (CKA) – Linux Foundation (2024–2026)</span>
+      <span class="cert-badge"><i class="fa-solid fa-certificate"></i> AWS ECS Fundamentals – KodeKloud</span>
+      <span class="cert-badge"><i class="fa-solid fa-certificate"></i> Terraform Associate (Course Completion) – Udemy</span>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-block">
+      <div><i class="fas fa-map-marker-alt"></i> Kottayam, Kerala, India</div>
+      <div><i class="fas fa-envelope"></i> <a href="mailto:mail2sruthymanohar@gmail.com">mail2sruthymanohar@gmail.com</a></div>
+      <div class="contact-socials">
         <a href="https://github.com/sruthymanohar" title="GitHub"><i class="fab fa-github"></i></a>
         <a href="https://www.linkedin.com/in/sruthy-manohar-9a9b54150/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
       </div>
-      <div class="section-title">Skills</div>
-      <div class="skills">
-        <span class="skill-badge">Kubernetes</span>
-        <span class="skill-badge">Helm</span>
-        <span class="skill-badge">Argo CD</span>
-        <span class="skill-badge">Docker</span>
-        <span class="skill-badge">Jenkins</span>
-        <span class="skill-badge">GitHub Actions</span>
-        <span class="skill-badge">AWS</span>
-        <span class="skill-badge">Terraform</span>
-        <span class="skill-badge">Ansible</span>
-        <span class="skill-badge">CloudWatch</span>
-        <span class="skill-badge">Prometheus</span>
-        <span class="skill-badge">Grafana</span>
-        <span class="skill-badge">Linux</span>
-        <span class="skill-badge">Git</span>
-        <span class="skill-badge">Bitbucket</span>
-        <span class="skill-badge">Shell Scripting</span>
-        <span class="skill-badge">Nagios</span>
-        <span class="skill-badge">PRTG</span>
-      </div>
-    </aside>
-    <div class="content">
-      <div class="card">
-        <h2>Professional Summary</h2>
-        <p>
-          Results-driven DevOps Engineer with 6+ years of experience architecting, automating, and managing scalable, secure cloud-native infrastructures. Proven expertise in Kubernetes (CKA certified), Helm, Argo CD, Terraform, Ansible, AWS, and CI/CD pipelines. Adept at driving GitOps adoption, streamlining deployment processes, and enabling high-velocity software delivery. Currently leading DevOps at IBS Software.
-        </p>
-      </div>
-      <div class="card">
-        <h2>Professional Experience</h2>
-        <ul class="fa-ul">
-          <li>
-            <span class="exp-job">Lead Product Engineer – DevOps, IBS Software, Kochi</span>
-            <span class="exp-date"><i class="fa-li fa fa-briefcase"></i>May 2023 – Present</span>
-            <ul>
-              <li>Spearheaded DevOps strategies and infra standardization across teams.</li>
-              <li>Automated deployment pipelines (Helm, Argo CD, Amazon EKS).</li>
-              <li>Centralized Jenkins deployment on Kubernetes for scalable CI/CD.</li>
-              <li>Integrated MSK, Strimzi Kafka, Prometheus, Grafana for observability.</li>
-              <li>Implemented GitOps workflows (Bitbucket, Argo CD).</li>
-            </ul>
-          </li>
-          <li>
-            <span class="exp-job">DevOps Engineer, Focaloid Technologies, Kochi</span>
-            <span class="exp-date"><i class="fa-li fa fa-briefcase"></i>Dec 2021 – Jan 2023</span>
-            <ul>
-              <li>Developed Terraform modules, Ansible roles for AWS infrastructure.</li>
-              <li>Designed Jenkins pipelines for Docker & Helm deployments.</li>
-            </ul>
-          </li>
-          <li>
-            <span class="exp-job">System Engineer – Cloud Support, Armia Systems Pvt Ltd, Kochi</span>
-            <span class="exp-date"><i class="fa-li fa fa-briefcase"></i>Aug 2020 – Dec 2021</span>
-            <ul>
-              <li>Managed Linux servers, automated workflows (Ansible, Bash).</li>
-              <li>Supported Dockerized apps, log analysis.</li>
-            </ul>
-          </li>
-          <li>
-            <span class="exp-job">System Engineer, Syntrio Technologies, Trivandrum</span>
-            <span class="exp-date"><i class="fa-li fa fa-briefcase"></i>Oct 2018 – Aug 2020</span>
-            <ul>
-              <li>System administration, server hardening, patch management.</li>
-              <li>Cloud computing & automation tools exposure.</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <div class="card">
-        <h2>Key Projects</h2>
-        <ul class="projects-list">
-          <li>
-            <span class="project-title">iFlight (IBS Software):</span> Migrated monolithic app to microservices (Kubernetes, GitOps). Helm, Argo CD, MSK, Prometheus, Grafana integration.
-          </li>
-          <li>
-            <span class="project-title">Centralized Jenkins on Kubernetes:</span> Jenkins controller on EKS, multi-team workflows.
-          </li>
-          <li>
-            <span class="project-title">Ansible Automation for IFLIGHT:</span> Automated provisioning and deployments (Ansible, Terraform).
-          </li>
-          <li>
-            <span class="project-title">School Education System:</span> Kubernetes deployments with custom Helm charts.
-          </li>
-          <li>
-            <span class="project-title">AWS Cost Reduction:</span> Grafana dashboards for AWS billing data monitoring.
-          </li>
-        </ul>
-      </div>
-      <div class="card">
-        <h2>Certifications</h2>
-        <ul class="certs-list">
-          <li><span class="cert-title">Certified Kubernetes Administrator (CKA)</span> – Linux Foundation (2024–2026)</li>
-          <li><span class="cert-title">AWS ECS Fundamentals</span> – KodeKloud</li>
-          <li><span class="cert-title">Terraform Associate (Course Completion)</span> – Udemy</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h2>Education</h2>
-        <ul class="edu-list">
-          <li><span class="edu-degree">B.Tech in Computer Science</span>, College of Engineering, Kidangoor (CUSAT), CGPA: 6.9</li>
-          <li>HSS: St. Augustine’s HSS, Ramapuram – 90%</li>
-          <li>SSLC: S.H.G.H.S, Ramapuram – 95%</li>
-        </ul>
+      <div>
+        <a href="mailto:mail2sruthymanohar@gmail.com" class="cta-btn">Let's Build Together!</a>
       </div>
     </div>
-  </div>
+  </section>
 </body>
 </html>
