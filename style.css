@@ -1,0 +1,97 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f7fbfd;
+  color: #232323;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background: #2e3a59;
+  color: #fff;
+  padding: 40px 0 20px 0;
+  text-align: center;
+}
+.header-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.profile-img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+h1, h2 {
+  margin: 10px 0 4px 0;
+}
+.location {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+.contact-btn {
+  display: inline-block;
+  margin: 6px 6px 0 6px;
+  padding: 8px 20px;
+  background: #3f51b5;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.contact-btn:hover {
+  background: #536dfe;
+}
+main {
+  max-width: 900px;
+  margin: 30px auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(44, 62, 80, 0.07);
+  padding: 32px 24px;
+}
+section {
+  margin-bottom: 36px;
+}
+h3 {
+  color: #2e3a59;
+  border-left: 5px solid #3f51b5;
+  padding-left: 12px;
+  margin-bottom: 14px;
+}
+ul.skills {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  list-style-type: disc;
+  margin-left: 18px;
+}
+ul.skills li {
+  margin-bottom: 8px;
+}
+.experience {
+  margin-bottom: 18px;
+}
+.duration {
+  color: #607d8b;
+  font-size: 0.97em;
+  font-style: italic;
+}
+footer {
+  background: #2e3a59;
+  color: #fff;
+  text-align: center;
+  padding: 18px 0;
+  font-size: 1em;
+  margin-top: 24px;
+}
+@media (max-width: 800px) {
+  main {
+    padding: 18px 5vw;
+  }
+  ul.skills {
+    columns: 1;
+  }
+}
